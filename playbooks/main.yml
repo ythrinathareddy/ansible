@@ -1,0 +1,16 @@
+---
+- name: Download Maven Package from GitHub Packages
+  hosts: localhost
+  gather_facts: false
+  vars:
+      bearer_token: secrets.GITHP_TOKEN 
+      repository_name: hprofile
+      repository_owner: ythrinathareddy
+  tasks:
+    - name: Retrieve packages for repository
+      shell: |
+            curl -L -O \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer {{ bearer_token }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://maven.pkg.github.com/ythrinathareddy/hprofile/com/com.mycompany.app/vprofile/Latest/vprofile-0.1.0.jar
