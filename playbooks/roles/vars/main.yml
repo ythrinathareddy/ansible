@@ -1,0 +1,9 @@
+bearer_token: secrets.GITHP_TOKEN
+repository_name: hprofile
+repository_owner: ythrinathareddy
+tomcat_bin_dir: "/opt/tomcat/apache-tomcat-9.0.85/bin"
+tomcat_webapps_dir: "/opt/tomcat/apache-tomcat-9.0.85/webapps"
+war_file_path: "/home/ansible/plays"
+tomcat_version: "9.0.62"
+tomcat_home: "/opt/tomcat"
+java_home: "/usr/lib/jvm/"

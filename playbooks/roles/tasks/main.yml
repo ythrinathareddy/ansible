@@ -1,0 +1,12 @@
+- include_tasks: download_maven_package.yml
+  name: Download Maven Package from GitHub Packages
+  hosts: localhost
+  become: true
+  gather_facts: false
+
+- include_tasks: deploy_to_tomcat.yml
+  name: Deploy to Tomcat
+  hosts: 192.168.1.10
+  become: true
+  gather_facts: false
+
