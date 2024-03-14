@@ -9,7 +9,7 @@
   tasks:
     - name: Retrieve packages for repository
       command: |
-            curl -L -O /opt/vprofile-0.1.0.jar \
+            curl -L -O /opt/ \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer {{ bearer_token }}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
