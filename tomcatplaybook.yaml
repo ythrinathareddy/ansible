@@ -1,2 +1,8 @@
-#Download Maven Package from GitHub Packages deploy to tomcat
+Download Maven Package from GitHub Packages deploy to tomcat
+- name: Download Maven Package from GitHub Packages deploy to tomcat
+  become: true  
+  gather_facts: true  
+  
+  roles:
+    - roles
 
