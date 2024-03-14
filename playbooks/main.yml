@@ -1,6 +1,6 @@
 ---
 - name: Download Maven Package from GitHub Packages
-  hosts: 192.168.1.10
+  hosts: localhost
   gather_facts: false
   vars:
       bearer_token: secrets.GITHP_TOKEN 
