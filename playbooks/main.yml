@@ -8,7 +8,7 @@
       repository_owner: ythrinathareddy
   tasks:
     - name: Retrieve packages for repository
-      command: |
+      shell: |
             curl -L -O /opt/ \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer {{ bearer_token }}" \
