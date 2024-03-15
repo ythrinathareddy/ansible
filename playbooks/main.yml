@@ -17,6 +17,7 @@
             -H "Authorization: Bearer {{ bearer_token }}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://maven.pkg.github.com/ythrinathareddy/hprofile/com/com.mycompany.app/vprofile/Latest/vprofile-0.1.2.war
-      dest: /opt/
+      args:
+        chdir: /opt/tomcat/apache-tomcat-9.0.85/webapps
       delegate_to: localhost
           
