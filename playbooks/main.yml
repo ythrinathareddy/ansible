@@ -6,4 +6,4 @@
     - name: Download Tomcat
       ansible.builtin.get_url:
         url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
-        dest: /tmp/apache-tomcat-9.0.85.tar.gz
+        dest: /opt/apache-tomcat-9.0.85.tar.gz
