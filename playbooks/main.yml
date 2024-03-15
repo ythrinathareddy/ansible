@@ -76,7 +76,10 @@
         name: tomcat
         state: stopped
       when: tomcat_status.status == "running"
-
+  handlers:
+    - name: Reload systemd
+      systemd:
+        daemon_reload: yes
     - name: Retrieve packages for repository
       shell: |
             curl -L -O /opt/tomcat/apache-tomcat-9.0.85/webapps/vprofile-0.1.2.war \
@@ -84,15 +87,7 @@
             -H "Authorization: Bearer {{ bearer_token }}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://maven.pkg.github.com/ythrinathareddy/hprofile/com/com.mycompany.app/vprofile/Latest/vprofile-0.1.2.war
-
-  handlers:
-    - name: Reload systemd
-      systemd:
-        daemon_reload: yes
-
-    - name: Restart tomcat
+    - name: start tomcat
       systemd:
         name: tomcat
-        state: restarted
-
-
+        state: started
