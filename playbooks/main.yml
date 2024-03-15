@@ -12,12 +12,12 @@
  
     - name: Retrieve packages for repository
       shell: |
-            curl -L -O /opt/tomcat/apache-tomcat-9.0.85/webapps/vprofile-0.1.2.war \
+            curl -L -O  \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer {{ bearer_token }}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://maven.pkg.github.com/ythrinathareddy/hprofile/com/com.mycompany.app/vprofile/Latest/vprofile-0.1.2.war
       args:
-        chdir: /opt/tomcat/apache-tomcat-9.0.85/webapps
+        chdir: /opt
       delegate_to: localhost
           
