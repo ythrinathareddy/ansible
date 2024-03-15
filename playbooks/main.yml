@@ -1,7 +1,7 @@
 - name: Download Maven Package from GitHub Packages 
   hosts: localhost
   become: true
-  gather_facts: false
+  gather_facts: false 
   tasks:
     - name: Download Tomcat
       ansible.builtin.get_url:
