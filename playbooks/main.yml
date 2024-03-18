@@ -83,7 +83,7 @@
       args:
         chdir: "/opt/"   
    
-      delegate_to: localhost
+      delegate_to: 192.168.1.11
     - name: copy the war file to tomcat server
       copy:
         src: "/opt/"
